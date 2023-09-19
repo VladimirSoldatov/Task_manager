@@ -14,6 +14,14 @@ namespace Task_manager
         {
             tasks = new List<AbstractTask>();
         }
+        public void addGroupTask(Array groupArray)
+        {
+            foreach(AbstractTask task in groupArray) 
+            {
+                tasks.Add(task);
+            }
+            
+        }
         public void AddTask()
         {
             Console.WriteLine("Привет, что хочешь создать: 1 - встреча, 2 - событие");
@@ -27,8 +35,6 @@ namespace Task_manager
                         string name_meeting = Console.ReadLine();
                         Console.WriteLine("Введите описание");
                         string description_meeting = Console.ReadLine();
-                        Console.WriteLine("Введите дату и время оповещения");
-                        string evendDate_meeting = Console.ReadLine();
                         Console.WriteLine("Введите дату и время начала");
                         string str_beginDate_meeting = Console.ReadLine();
                         Console.WriteLine("Введите дату и время окончания");
